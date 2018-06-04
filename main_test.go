@@ -1,0 +1,19 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestBarcodeMaker(t *testing.T) {
+	r, err := barcodeMaker(Event{
+		Sentence: "Hello world",
+	})
+	if err != nil {
+		t.Error(err)
+	}
+
+	t.Log(r.ImgTag)
+	if r.ImgTag != `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIEAAAAADYoy0BAAADB0lEQVR4nOzd0YrUMBhAYUf2/V95vfBiVwol7SbpN3i+K0HcaT0E/G0y/fj8/BXI76cvIP8qCKYgmIJgPr5++Xo9eSH3/nFxvOZZP2en79fcCsEUBFMQTEEwBcEUBFMQTEEwH2e/ue5/gu8NYiN/atao+NS9t0IwBcEUBFMQTEEwBcEUBFMQzOlgeHRvoNv5FE8bZq9eTysEUxBMQTAFwRQEUxBMQTAFwRQEUxBMQTAFwRQEUxBMQTAFwRQEc/GJoWbkedyszaV7tEIwBcEUBFMQTEEwBcEUBFMQzMXBUB6p/lo3Bu6591YIpiCYgmAKgikIpiCYgmAKgjkdDJ/9rs6j42g2MgbeGxWfuvdWCKYgmIJgCoIpCKYgmIJgCoL5Nhj6TwPvGbkv595bIZiCYAqCKQimIJiCYAqCKQjm9D2GI0/fZjl+1s43G+68r3OtEExBMAXBFARTEExBMAXBFATz4zOG/mZObUPs+d9GKwRTEExBMAXBFARTEExBMAXBvL6Gkp1PzUY+a9b2znXvH1zxk1shmIJgCoIpCKYgmIJgCoIpCOb0ieGszZza9s6jp8bAo1YIpiCYgmAKgikIpiCYgmAKgnldG1zuPel7dsTbM9CNayvpWykIpiCYgmAKgikIpiCYgmAuDoY7zdpuOuvNhnu2v7ZCMAXBFARTEExBMAXBFARTEMyWM4Yj1p0ofK/hsRWCKQimIJiCYAqCKQimIJiCYBacMRwxMkDdG9ZmjYHrXt7RVtK3UhBMQTAFwRQEUxBMQTAFwVx8XcWz5/VmDXTPnkM8/6xWCKYgmIJgCoIpCKYgmIJgCoK5OBj61n31zawzhm0lfSsFwRQEUxBMQTAFwRQEUxDMWw2Gs548rjt1+POziq0QTEEwBcEUBFMQTEEwBcEUBHNxMNz5HabrXou/c7vpVa0QTEEwBcEUBFMQTEEwBcEUBHM6GD77PaXrXot/72TiyM8ZuZ62kr6VgmAKgikIpiCYgmAKgikIBn6P4f+pFYIpCKYgmIJgCoL5EwAA//9sUqWQCYzlcAAAAABJRU5ErkJggg==">` {
+		t.Errorf("assert fail : %v", r)
+	}
+}

@@ -64,14 +64,11 @@ Response parameters:
 }
 ```
 
+## License
 
-## Install
-
-
-## Licence
-
-MIT
+Apache License
 
 ## Author
 
-[Koichiro Nishijima](https://github.com/k-nishijima/)
+
+[Koichiro Nishijima](https://github.com/k-nishijima/) / [R3 institute](https://www.r3it.com/)

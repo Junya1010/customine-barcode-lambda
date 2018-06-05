@@ -25,6 +25,7 @@ go get -u github.com/golang/dep/cmd/dep
 
 ```
 $ GOOS=linux GOARCH=amd64 go build -o build/barcodeMaker
+
 $ aws cloudformation package \
     --profile your_profile_name \
     --template-file template.yml \
@@ -36,11 +37,11 @@ $ aws cloudformation deploy \
     --profile your_profile_name \
     --template-file .template.yml \
     --capabilities CAPABILITY_IAM \
-    --stack-name your_stack_name
+    --stack-name yourStackName
 
 $ aws cloudformation describe-stack-events \
     --profile your_profile_name \
-    --stack-name your_stack_name
+    --stack-name yourStackName
 ```
 
 ## Usage

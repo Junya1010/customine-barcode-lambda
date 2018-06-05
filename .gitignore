@@ -1,4 +1,4 @@
-barcodeMaker
-handler.zip
 vendor
+build/*
+!.gitkeep
 

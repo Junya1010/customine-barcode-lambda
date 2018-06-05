@@ -24,8 +24,7 @@ go get -u github.com/golang/dep/cmd/dep
 ## Build
 
 ```
-$ GOOS=linux GOARCH=amd64 go build -o barcodeMaker
-$ zip handler.zip ./barcodeMaker
+$ GOOS=linux GOARCH=amd64 go build -o build/barcodeMaker
 ```
 
 ## Usage
@@ -44,7 +43,7 @@ Response parameters:
 
 ```
 {
-    "img": "......"
+    "img": "<img src=......"
 }
 ```
 

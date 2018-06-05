@@ -1,4 +1,5 @@
 vendor
 build/*
 !.gitkeep
+.template.yml
 

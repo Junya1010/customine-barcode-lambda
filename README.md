@@ -21,10 +21,26 @@ go get -u github.com/golang/dep/cmd/dep
 
 * https://github.com/boombuler/barcode
 
-## Build
+## Build and Deploy with AWS SAM
 
 ```
 $ GOOS=linux GOARCH=amd64 go build -o build/barcodeMaker
+$ aws cloudformation package \
+    --profile your_profile_name \
+    --template-file template.yml \
+    --s3-bucket your_bucket \
+    --region your_region \
+    --s3-prefix your_bucket_prefix \
+    --output-template-file .template.yml
+$ aws cloudformation deploy \
+    --profile your_profile_name \
+    --template-file .template.yml \
+    --capabilities CAPABILITY_IAM \
+    --stack-name your_stack_name
+
+$ aws cloudformation describe-stack-events \
+    --profile your_profile_name \
+    --stack-name your_stack_name
 ```
 
 ## Usage

@@ -1,3 +1,5 @@
+（[日本語による使い方はこちらをご覧ください！](https://support.gusuku.io/ja-JP/support/solutions/articles/36000070787)）
+
 Customine Barcode Lambda
 ====
 
